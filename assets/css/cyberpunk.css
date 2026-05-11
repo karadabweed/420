@@ -249,17 +249,13 @@ body.is-preload{
   position: relative;
   overflow:hidden;
   height: auto;
+  min-height: 250px;
+  text-align: center;
 }
 
+/* Remove card bottom “lines”/overlay decoration */
 .kara-card::after{
-  content:'';
-  position:absolute;
-  inset:-30%;
-  background:
-    radial-gradient(circle at 20% 20%, rgba(57,255,20,.20), transparent 55%),
-    radial-gradient(circle at 80% 30%, rgba(178,76,255,.16), transparent 55%);
-  opacity:.0;
-  transition: opacity .2s ease;
+  content: none;
 }
 
 .kara-card:hover{
@@ -267,7 +263,7 @@ body.is-preload{
   border-color: rgba(255,255,255,.26);
   box-shadow: var(--shadow);
 }
-.kara-card:hover::after{ opacity: 1; }
+/* no-op */
 
 .kara-card > *{ position: relative; z-index: 1; }
 
@@ -300,7 +296,7 @@ body.is-preload{
 }
 
 .kara-card-name{
-  text-align:left;
+  text-align:center;
 }
 
 .kara-card-name h3{
@@ -337,38 +333,34 @@ body.is-preload{
   color: var(--muted);
   line-height: 1.45;
   font-size: 14px;
-  text-align:left;
+  text-align:center;
 }
 
 .kara-effects{
-  margin-top: 12px;
-  text-align:left;
-}
-
-.kara-effects-label{
-  font-weight: 900;
-  color: rgba(255,255,255,.86);
-  text-transform: uppercase;
-  font-size: 12px;
-  letter-spacing: .1em;
-  margin-bottom: 8px;
+  margin-top: 10px;
+  text-align:center;
 }
 
 .kara-effects ul{
   display:flex;
   flex-wrap: wrap;
-  gap: 8px;
-  padding-left: 0;
+  justify-content: center;
+  gap: 7px;
+  padding: 0;
   margin: 0;
+  list-style: none;
 }
 
 .kara-effects li{
   font-weight: 800;
   font-size: 12px;
-  padding: 8px 10px;
+  line-height: 1;
+  padding: 7px 10px;
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.12);
-  background: rgba(0,0,0,.35);
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(0,0,0,.28);
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+  white-space: nowrap;
 }
 
 /* Contact */
@@ -410,23 +402,32 @@ body.is-preload{
   width: 100%;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 22px; /* lower a bit */
+  gap: 14px; /* slightly tighter */
 }
 .kara-social-qr > div{
   display:flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 8px; /* tighter */
   min-width: 148px;
 }
 
-/* QR size consistent */
-.kara-social-qr img{
-  display: block;
-  width: 132px;
-  height: 132px;
-  object-fit: contain;
+/* Social link text (when QR removed, labels become clickable) */
+.kara-social-text{
+  display:inline-block;
+  font-weight: 800;
+  letter-spacing: 0.25px;
+  font-size: 0.85rem; /* a bit smaller */
+  color: var(--fg);
+  text-decoration: none;
 }
+.kara-social-text:hover{
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* (QR code images removed) */
 
 /* Mobile: stack each platform block vertically */
 @media (max-width: 719px){
