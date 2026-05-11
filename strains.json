@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Purple Haze",
+    "type": "Hybrid",
+    "thc": "24%",
+    "desc": "Dreamy cerebral high with grape sweetness and calm body buzz.",
+    "image": "https://images.unsplash.com/photo-1603909223429-69bb7101f420"
+  },
+  {
+    "name": "Pink Runtz",
+    "type": "Hybrid",
+    "thc": "27%",
+    "desc": "Sweet candy aroma with euphoric uplifting effects.",
+    "image": "https://images.unsplash.com/photo-1536816579748-4ecb3f03d72a"
+  },
+  {
+    "name": "Blue Dream",
+    "type": "Sativa",
+    "thc": "22%",
+    "desc": "Balanced strain with calm energy and creative clarity.",
+    "image": "https://images.unsplash.com/photo-1519996529931-28324d5a630e"
+  }
+]
