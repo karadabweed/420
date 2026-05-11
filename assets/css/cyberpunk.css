@@ -421,6 +421,7 @@ body.is-preload{
   font-size: 0.85rem; /* a bit smaller */
   color: var(--fg);
   text-decoration: none;
+  border-bottom: none !important; /* removes dotted underline from main.css */
 }
 .kara-social-text:hover{
   text-decoration: underline;
