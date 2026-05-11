@@ -1,22 +1,4 @@
 * {
-  font-size: 0.9rem;
-}
-
-.description {
-  color: #cfcfcf;
-  margin-top: 1.2rem;
-  line-height: 1.7;
-}
-
-.effects {
-  display: flex;
-  gap: 0.7rem;
-  flex-wrap: wrap;
-  margin-top: 1.5rem;
-}
-
-.effects span {
-  padding: 0.5rem 1rem;
   border-radius: 999px;
   border: 1px solid rgba(0,255,157,0.2);
   color: #9fffd5;
