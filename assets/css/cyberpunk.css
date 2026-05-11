@@ -1,0 +1,488 @@
+/* Cyberpunk KARA DABWEED theme (overrides Aerial layout). */
+:root{
+  --bg:#000;
+  --fg:rgba(255,255,255,.92);
+  --muted:rgba(255,255,255,.68);
+  --neon:#39ff14;        /* neon green */
+  --neon2:#b24cff;       /* purple */
+  --outline:rgba(255,255,255,.12);
+  --card:#070707;
+  --shadow: 0 0 18px rgba(57,255,20,.35), 0 0 28px rgba(178,76,255,.25);
+}
+
+html, body{
+  background: var(--bg) !important;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Ensure vertical scrolling works even if the template sets overflow: hidden */
+body{
+  overflow-y: auto;
+}
+
+body.is-preload{
+  overflow: auto;
+}
+
+/* Kill the fixed/fullscreen Aerial positioning so we can scroll normally. */
+#wrapper,
+#bg,
+#overlay,
+#main{
+  position: static !important;
+  height: auto !important;
+  width: 100% !important;
+  overflow: visible !important;
+}
+
+#wrapper{
+  display:block;
+}
+
+#header,
+#footer{
+  position: static !important;
+  width: 100% !important;
+}
+
+#header{
+  display:none; /* we replace with our own header in the markup */
+}
+
+#footer{
+  display:none; /* we replace with our own contact/footer in the markup */
+}
+
+/* App layout */
+.kara-page{
+  position: relative;
+  min-height: 100vh;
+  background: #000;
+  color: var(--fg);
+  font-family: "Source Sans Pro", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Ambient layers */
+.kara-ambient{
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.kara-ambient .smoke{
+  position:absolute;
+  inset: -25%;
+  opacity: .35;
+  filter: blur(26px);
+  background:
+    radial-gradient(circle at 15% 25%, rgba(57,255,20,.18), transparent 55%),
+    radial-gradient(circle at 85% 20%, rgba(178,76,255,.20), transparent 52%),
+    radial-gradient(circle at 40% 80%, rgba(57,255,20,.16), transparent 58%),
+    radial-gradient(circle at 70% 75%, rgba(178,76,255,.16), transparent 60%);
+  animation: karaSmoke 14s ease-in-out infinite;
+}
+
+@keyframes karaSmoke{
+  0%{ transform: translate3d(-2%, -1%, 0) scale(1.02); }
+  50%{ transform: translate3d(2%, 1.5%, 0) scale(1.06); }
+  100%{ transform: translate3d(-2%, -1%, 0) scale(1.02); }
+}
+
+.kara-ambient .particles{
+  position:absolute;
+  inset:0;
+  opacity:.85;
+}
+
+.kara-ambient .particles::before,
+.kara-ambient .particles::after{
+  content:'';
+  position:absolute;
+  inset:-10%;
+  background:
+    radial-gradient(circle, rgba(57,255,20,.85) 0 1px, transparent 2px) 0 0/28px 28px,
+    radial-gradient(circle, rgba(178,76,255,.78) 0 1px, transparent 2px) 14px 18px/36px 36px,
+    radial-gradient(circle, rgba(255,255,255,.38) 0 1px, transparent 2px) 8px 12px/42px 42px;
+  filter: blur(.2px);
+  animation: karaParticles 9s linear infinite;
+}
+.kara-ambient .particles::after{
+  opacity:.55;
+  transform: rotate(12deg);
+  animation-duration: 13s;
+}
+
+@keyframes karaParticles{
+  from{ transform: translate3d(0,0,0); }
+  to{ transform: translate3d(-40px, 30px, 0); }
+}
+
+/* Content wrapper */
+.kara-content{
+  position: relative;
+  z-index: 1;
+  padding: 28px 16px 56px;
+}
+
+/* Hero */
+.kara-hero{
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.kara-logo{
+  font-weight: 900;
+  font-size: clamp(40px, 10vw, 78px);
+  line-height: .95;
+  letter-spacing: -0.06em;
+  text-transform: uppercase;
+  text-shadow:
+    0 0 12px rgba(57,255,20,.35),
+    0 0 22px rgba(178,76,255,.25);
+  margin: 10px 0 10px;
+}
+
+.kara-tagline{
+  font-size: clamp(16px, 4.2vw, 22px);
+  color: var(--muted);
+  margin-bottom: 22px;
+}
+
+.kara-buttons{
+  display:flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.kara-btn{
+  appearance:none;
+  border: 2px solid rgba(255,255,255,.22);
+  background: rgba(0,0,0,.55);
+  color: var(--fg);
+  font-weight: 700;
+  padding: 12px 16px;
+  border-radius: 14px;
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width: 210px;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+  transition: transform .15s ease, box-shadow .2s ease, border-color .2s ease;
+  position: relative;
+  overflow:hidden;
+}
+
+.kara-btn::before{
+  content:'';
+  position:absolute;
+  inset:-40%;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(57,255,20,.35), transparent 55%),
+    radial-gradient(circle at 70% 60%, rgba(178,76,255,.28), transparent 60%);
+  opacity:.0;
+  transition: opacity .2s ease;
+}
+
+.kara-btn:hover{
+  transform: translateY(-2px);
+  border-color: rgba(255,255,255,.35);
+  box-shadow: var(--shadow);
+}
+.kara-btn:hover::before{ opacity: 1; }
+
+.kara-btn span{
+  position: relative;
+  z-index: 1;
+}
+
+/* Section headings */
+.kara-section{
+  margin-top: 34px;
+}
+
+.kara-section-title{
+  font-size: 22px;
+  font-weight: 900;
+  text-align:left;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin: 0 0 14px;
+  padding-left: 4px;
+}
+
+.kara-section-title .glow{
+  color: var(--neon);
+  text-shadow: 0 0 14px rgba(57,255,20,.35);
+}
+
+.kara-subtle-line{
+  height:2px;
+  background: rgba(255,255,255,.07);
+  border-radius: 999px;
+  margin: 10px 0 18px;
+}
+
+/* Strain cards grid */
+.kara-grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  align-items: stretch;
+  justify-items: stretch;
+}
+
+.kara-card{
+  background: rgba(7,7,7,.78);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 18px;
+  padding: 14px;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+  transition: transform .15s ease, box-shadow .2s ease, border-color .2s ease;
+  position: relative;
+  overflow:hidden;
+  height: auto;
+}
+
+.kara-card::after{
+  content:'';
+  position:absolute;
+  inset:-30%;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(57,255,20,.20), transparent 55%),
+    radial-gradient(circle at 80% 30%, rgba(178,76,255,.16), transparent 55%);
+  opacity:.0;
+  transition: opacity .2s ease;
+}
+
+.kara-card:hover{
+  transform: translateY(-2px);
+  border-color: rgba(255,255,255,.26);
+  box-shadow: var(--shadow);
+}
+.kara-card:hover::after{ opacity: 1; }
+
+.kara-card > *{ position: relative; z-index: 1; }
+
+.kara-card-top{
+  display:flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.kara-strain-img{
+  width: 70px;
+  height: 70px;
+  border-radius: 14px;
+  border: 2px solid rgba(255,255,255,.18);
+  background: #000;
+  overflow:hidden;
+  flex: 0 0 auto;
+  box-shadow:
+    0 0 10px rgba(57,255,20,.20),
+    0 0 14px rgba(178,76,255,.18);
+}
+
+.kara-strain-img img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  display:block;
+  filter: saturate(1.1) contrast(1.05);
+  transform: scale(1.02);
+}
+
+.kara-card-name{
+  text-align:left;
+}
+
+.kara-card-name h3{
+  font-size: 20px;
+  font-weight: 900;
+  margin: 0 0 4px;
+  text-transform: uppercase;
+}
+
+.kara-badges{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.kara-badge{
+  display:inline-flex;
+  align-items:center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(0,0,0,.45);
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: .02em;
+}
+
+.kara-badge.type{ border-color: rgba(57,255,20,.35); }
+.kara-badge.thc{ border-color: rgba(178,76,255,.35); }
+
+.kara-desc{
+  margin-top: 12px;
+  color: var(--muted);
+  line-height: 1.45;
+  font-size: 14px;
+  text-align:left;
+}
+
+.kara-effects{
+  margin-top: 12px;
+  text-align:left;
+}
+
+.kara-effects-label{
+  font-weight: 900;
+  color: rgba(255,255,255,.86);
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: .1em;
+  margin-bottom: 8px;
+}
+
+.kara-effects ul{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-left: 0;
+  margin: 0;
+}
+
+.kara-effects li{
+  font-weight: 800;
+  font-size: 12px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(0,0,0,.35);
+}
+
+/* Contact */
+.kara-contact{
+  margin-top: 34px;
+}
+
+.kara-contact-card{
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(7,7,7,.72);
+  border-radius: 18px;
+  padding: 16px;
+}
+
+.kara-contact-title{
+  font-size: 22px;
+  font-weight: 900;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+.kara-contact-copy{
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+.kara-social{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contact social + QR layout (mobile-first) */
+.kara-social-qr{
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.kara-social-qr > div{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  min-width: 148px;
+}
+
+/* QR size consistent */
+.kara-social-qr img{
+  display: block;
+  width: 132px;
+  height: 132px;
+  object-fit: contain;
+}
+
+/* Mobile: stack each platform block vertically */
+@media (max-width: 719px){
+  .kara-social-qr{
+    flex-direction: column;
+    gap: 16px;
+  }
+  .kara-social-qr > div{
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+.kara-icon{
+  width: 52px;
+  height: 52px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius: 16px;
+  border: 2px solid rgba(255,255,255,.16);
+  background: rgba(0,0,0,.45);
+  text-decoration:none;
+  color: var(--fg);
+  transition: transform .15s ease, box-shadow .2s ease, border-color .2s ease;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+.kara-icon i{
+  font-size: 20px;
+}
+
+.kara-icon:hover{
+  transform: translateY(-2px);
+  border-color: rgba(255,255,255,.32);
+  box-shadow: var(--shadow);
+}
+
+/* Desktop */
+@media (min-width: 720px){
+  .kara-content{ padding: 44px 22px 72px; }
+  .kara-grid{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .kara-card{ padding: 16px; }
+  .kara-effects li{ font-size: 13px; }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .kara-ambient .smoke,
+  .kara-ambient .particles::before,
+  .kara-ambient .particles::after{
+    animation: none !important;
+  }
+  .kara-btn,
+  .kara-card,
+  .kara-icon{
+    transition: none !important;
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "timezone": "Australia/Perth",
+  "weekStart": "2026-05-11",
+  "sections": [
+    {
+      "id": "shuk",
+      "title": "Shuk",
+      "cards": [
+        {
+          "name": "Birthday Cake",
+          "url": "https://www.leafly.com/strains/birthday-cake-kush",
+          "type": "Indica-dominant hybrid",
+          "thc": "THC: (not captured from search snippet)",
+          "description": "Sweet cake-like / dessert profile with strong body effects (Leafly).",
+          "effects": []
+        },
+        {
+          "name": "Buddha OG",
+          "url": "https://www.leafly.com/strains/buddha-og-kush",
+          "type": "(Leafly snippet)",
+          "thc": "THC: (not captured from search snippet)",
+          "description": "Pungent piney aroma with gassy spiciness (Leafly).",
+          "effects": []
+        },
+        {
+          "name": "Gelato 33",
+          "url": "https://www.leafly.com/strains/gelato-33",
+          "type": "Hybrid",
+          "thc": "THC: (not captured from search snippet)",
+          "description": "Cross of Sunset Sherbet x Thin Mint GSC (Leafly).",
+          "effects": []
+        },
+        {
+          "name": "Garlic Cookies",
+          "url": "https://www.leafly.com/strains/gmo",
+          "type": "Indica-dominant hybrid",
+          "thc": "THC: (not captured from search snippet)",
+          "description": "Powerhouse indica with loud garlic/onion/diesel/earthy funk aroma (Leafly).",
+          "effects": []
+        },
+        {
+          "name": "Black Truffle",
+          "url": "https://www.leafly.com/strains/black-truffle",
+          "type": "Indica-dominant hybrid",
+          "thc": "THC: 18%",
+          "description": "Bred by Big Chief; cross including Gelato 33 (Leafly snippet).",
+          "effects": []
+        },
+        {
+          "name": "Blackberry Gelato",
+          "url": "https://www.leafly.com/strains/blackberry-gelato",
+          "type": "(Leafly snippet)",
+          "thc": "THC: (not captured from search snippet)",
+          "description": "Fruity and fuel-like aroma; berry/sweet flavor with hints of violet + pepper (Leafly).",
+          "effects": []
+        },
+        {
+          "name": "Mule Fuel",
+          "url": "https://www.leafly.com/strains/mule-fuel",
+          "type": "(Leafly snippet calls it hybrid; often indica-leaning)",
+          "thc": "THC: 29%",
+          "description": "Hybrid made from Lurch x GMO Cookies (Leafly snippet).",
+          "effects": []
+        }
+      ]
+    },
+    {
+      "id": "locals",
+      "title": "Locals",
+      "cards": [
+        {
+          "name": "Baguio Gold",
+          "thc": "THC: 22%",
+          "description": "A classic local favorite.",
+          "effects": ["Calm", "Cozy"]
+        },
+        {
+          "name": "Kibungan",
+          "thc": "THC: 25%",
+          "description": "Bright, aromatic, balanced.",
+          "effects": ["Happy", "Relaxed"]
+        }
+      ]
+    },
+    {
+      "id": "dispos",
+      "title": "Dispos",
+      "cards": [
+        {
+          "name": "Muha Meds 1g",
+          "thc": "THC: 75%",
+          "description": "Smooth and consistent puffs.",
+          "effects": ["Relaxed"]
+        },
+        {
+          "name": "Mini by Tiny 1g",
+          "thc": "THC: 70%",
+          "description": "Compact, strong flavor.",
+          "effects": ["Happy", "Focused"]
+        },
+        {
+          "name": "Turn 1g",
+          "thc": "THC: 65%",
+          "description": "Clean draw with a strong finish.",
+          "effects": ["Calm", "Sleepy"]
+        }
+      ]
+    }
+  ]
+}

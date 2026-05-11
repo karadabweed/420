@@ -1,0 +1,422 @@
+<!doctype html>
+<html>
+  <head>
+    <title>KARA DABWEED</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/cyberpunk.css" />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+
+    <!-- Font Awesome is already included by the template's main.scss, but keep this for safety in GitHub Pages builds -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+  </head>
+
+  <body class="is-preload">
+    <!-- Ambient effects -->
+    <div class="kara-page kara-ambient" aria-hidden="true">
+      <div class="smoke"></div>
+      <div class="particles"></div>
+    </div>
+
+    <div id="wrapper" class="kara-page">
+      <div id="main" class="kara-content kara-page">
+        <header class="kara-hero" aria-label="Hero">
+          <div class="kara-logo">Kara Dabweed</div>
+          <div class="kara-tagline">Locals &bull; Kush &bull; Dispos</div>
+
+          <div class="kara-buttons">
+            <a class="kara-btn" href="#shuk">
+              <span>This Week’s Strains</span>
+            </a>
+            <a class="kara-btn" href="#contact">
+              <span>Contact</span>
+            </a>
+          </div>
+        </header>
+
+        <section id="shuk" class="kara-section" aria-label="Shuk">
+          <div class="kara-section-title">
+            <span class="glow">Shuk</span>
+          </div>
+          <div class="kara-subtle-line" aria-hidden="true"></div>
+
+          <div
+            class="kara-grid kara-menu-grid"
+            id="shuk-grid"
+            aria-live="polite"
+          ></div>
+        </section>
+
+        <section id="locals" class="kara-section" aria-label="Locals">
+          <div class="kara-section-title">
+            <span class="glow">Locals</span>
+          </div>
+          <div class="kara-subtle-line" aria-hidden="true"></div>
+
+          <div
+            class="kara-grid kara-menu-grid"
+            id="locals-grid"
+            aria-live="polite"
+          ></div>
+        </section>
+
+        <section id="dispos" class="kara-section" aria-label="Dispos">
+          <div class="kara-section-title">
+            <span class="glow">Dispos</span>
+          </div>
+          <div class="kara-subtle-line" aria-hidden="true"></div>
+
+          <div
+            class="kara-grid kara-menu-grid"
+            id="dispos-grid"
+            aria-live="polite"
+          ></div>
+        </section>
+
+        <section id="contact" class="kara-contact" aria-label="Contact">
+          <div class="kara-section-title">
+            <span class="glow">Contact</span>
+          </div>
+          <div class="kara-subtle-line" aria-hidden="true"></div>
+
+          <div class="kara-contact-card">
+            <div class="kara-contact-title">DM for menu & availability</div>
+            <div class="kara-contact-copy">Pick your channel:</div>
+
+            <div
+              class="kara-social kara-social-qr"
+              aria-label="Social links and QR codes"
+              style="
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 18px;
+                text-align: center;
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  gap: 10px;
+                "
+              >
+                <a
+                  class="kara-icon"
+                  href="https://www.facebook.com/profile.php?id=61589416477941"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                  style="
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                  "
+                >
+                  <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                </a>
+                <div
+                  style="
+                    font-weight: 700;
+                    letter-spacing: 0.3px;
+                    font-size: 0.95rem;
+                  "
+                >
+                  Facebook
+                </div>
+                <a
+                  href="https://www.facebook.com/profile.php?id=61589416477941"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook QR code"
+                  style="
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                  "
+                >
+                  <img
+                    src="assets/qr/qr-fb.png"
+                    alt="Facebook QR code"
+                    style="
+                      width: 132px;
+                      height: 132px;
+                      object-fit: contain;
+                      border: 2px solid #000;
+                      border-radius: 10px;
+                      background: #fff;
+                    "
+                  />
+                </a>
+              </div>
+
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  gap: 10px;
+                "
+              >
+                <a
+                  class="kara-icon"
+                  href="https://www.instagram.com/karadabweed?igsh=MWV6MnB0dzVlMDJucg%3D%3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  style="
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                  "
+                >
+                  <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+                <div
+                  style="
+                    font-weight: 700;
+                    letter-spacing: 0.3px;
+                    font-size: 0.95rem;
+                  "
+                >
+                  Instagram
+                </div>
+                <a
+                  href="https://www.instagram.com/karadabweed?igsh=MWV6MnB0dzVlMDJucg%3D%3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram QR code"
+                  style="
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                  "
+                >
+                  <img
+                    src="assets/qr/qr-ig.png"
+                    alt="Instagram QR code"
+                    style="
+                      width: 132px;
+                      height: 132px;
+                      object-fit: contain;
+                      border: 2px solid #000;
+                      border-radius: 10px;
+                      background: #fff;
+                    "
+                  />
+                </a>
+              </div>
+
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  gap: 10px;
+                "
+              >
+                <a
+                  class="kara-icon"
+                  href="https://t.me/karadabweed"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Telegram"
+                  style="
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                  "
+                >
+                  <i class="fab fa-telegram-plane" aria-hidden="true"></i>
+                </a>
+                <div
+                  style="
+                    font-weight: 700;
+                    letter-spacing: 0.3px;
+                    font-size: 0.95rem;
+                  "
+                >
+                  Telegram
+                </div>
+                <a
+                  href="https://t.me/karadabweed"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Telegram QR code"
+                  style="
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                  "
+                >
+                  <img
+                    src="assets/qr/qr-tg.png"
+                    alt="Telegram QR code"
+                    style="
+                      width: 132px;
+                      height: 132px;
+                      object-fit: contain;
+                      border: 2px solid #000;
+                      border-radius: 10px;
+                      background: #fff;
+                    "
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script>
+      window.onload = function () {
+        document.body.classList.remove("is-preload");
+      };
+      window.ontouchmove = function () {
+        return false;
+      };
+      window.onorientationchange = function () {
+        document.body.scrollTop = 0;
+      };
+
+      (function () {
+        const DATA_URL = "data/menu.json";
+
+        const grids = {
+          shuk: document.getElementById("shuk-grid"),
+          locals: document.getElementById("locals-grid"),
+          dispos: document.getElementById("dispos-grid"),
+        };
+
+        function el(tag, className, text) {
+          const node = document.createElement(tag);
+          if (className) node.className = className;
+          if (text !== undefined) node.textContent = text;
+          return node;
+        }
+
+        function renderMenuCard(card) {
+          // Simple + identical size: reuse template card classes but omit images
+          const article = el("article", "kara-card");
+
+          // Wrap the whole card content with a hyperlink if url exists
+          const link = document.createElement("a");
+          link.href = card.url || "#";
+          link.target = "_blank";
+          link.rel = "noopener noreferrer";
+          link.setAttribute("aria-label", "View strain: " + card.name);
+          link.style.color = "inherit";
+          link.style.textDecoration = "none";
+          link.style.display = "block";
+          link.style.height = "100%";
+
+          const inner = el("div");
+
+          const top = el("div", "kara-card-top");
+          const nameWrap = el("div", "kara-card-name");
+
+          const h3 = el("h3", null, card.name);
+
+          const badges = el("div", "kara-badges");
+          badges.setAttribute("aria-label", "Type and THC");
+
+          // Type badge (if present)
+          if (card.type) {
+            const type = el("span", "kara-badge type", card.type);
+            badges.appendChild(type);
+          }
+
+          // THC badge (if present)
+          if (card.thc) {
+            const thc = el("span", "kara-badge thc", card.thc);
+            badges.appendChild(thc);
+          }
+
+          nameWrap.appendChild(h3);
+          nameWrap.appendChild(badges);
+
+          top.appendChild(nameWrap);
+          inner.appendChild(top);
+
+          if (card.description) {
+            const p = el("p", "kara-desc", card.description);
+            inner.appendChild(p);
+          }
+
+          const effects = el("div", "kara-effects");
+          effects.setAttribute("aria-label", "Effects");
+
+          const effectsLabel = el("div", "kara-effects-label", "Effects");
+          const ul = document.createElement("ul");
+          for (const item of card.effects || []) {
+            const li = document.createElement("li");
+            li.textContent = item;
+            ul.appendChild(li);
+          }
+
+          effects.appendChild(effectsLabel);
+          effects.appendChild(ul);
+          inner.appendChild(effects);
+
+          link.appendChild(inner);
+          article.appendChild(link);
+
+          return article;
+        }
+
+        function setGridMessage(grid, message) {
+          if (!grid) return;
+          grid.textContent = message;
+        }
+
+        async function load() {
+          // Ensure grids exist before proceeding
+          const hasAnyGrid = Object.values(grids).some(Boolean);
+          if (!hasAnyGrid) return;
+
+          try {
+            const res = await fetch(DATA_URL, { cache: "no-store" });
+            if (!res.ok) throw new Error("HTTP " + res.status);
+            const data = await res.json();
+
+            const sections = Array.isArray(data.sections) ? data.sections : [];
+            const byId = new Map(sections.map((s) => [s.id, s]));
+
+            for (const id of Object.keys(grids)) {
+              const grid = grids[id];
+              if (!grid) continue;
+
+              const section = byId.get(id);
+              const cards =
+                section && Array.isArray(section.cards) ? section.cards : [];
+
+              grid.innerHTML = "";
+
+              if (!cards || cards.length === 0) {
+                setGridMessage(grid, "No items available.");
+                continue;
+              }
+
+              for (const card of cards) {
+                grid.appendChild(renderMenuCard(card));
+              }
+            }
+          } catch (e) {
+            for (const id of Object.keys(grids)) {
+              setGridMessage(grids[id], "Failed to load menu.");
+            }
+            // Keep errors minimal; avoid leaking details to users.
+          }
+        }
+
+        load();
+      })();
+    </script>
+  </body>
+</html>
